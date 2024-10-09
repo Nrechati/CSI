@@ -1,0 +1,132 @@
+\begin{thebibliography}{10}
+
+\bibitem{rashid2006three}
+M.~Rashid and M.~Selimotic, ``A three-dimensional finite element method with
+  arbitrary polyhedral elements,'' {\em International Journal for Numerical
+  Methods in Engineering}, vol.~67, no.~2, pp.~226--252, 2006.
+
+\bibitem{bishop2014displacement}
+J.~E. Bishop, ``A displacement-based finite element formulation for general
+  polyhedra using harmonic shape functions,'' {\em International Journal for
+  Numerical Methods in Engineering}, vol.~97, no.~1, pp.~1--31, 2014.
+
+\bibitem{gain2014virtual}
+A.~L. Gain, C.~Talischi, and G.~H. Paulino, ``On the virtual element method for
+  three-dimensional linear elasticity problems on arbitrary polyhedral
+  meshes,'' {\em Computer Methods in Applied Mechanics and Engineering},
+  vol.~282, pp.~132--160, 2014.
+
+\bibitem{bishop2020polyhedral}
+J.~E. Bishop and N.~Sukumar, ``Polyhedral finite elements for nonlinear solid
+  mechanics using tetrahedral subdivisions and dual-cell aggregation,'' {\em
+  Computer Aided Geometric Design}, vol.~77, p.~101812, 2020.
+
+\bibitem{spiegel2011tetrahedral}
+M.~Spiegel, T.~Redel, Y.~J. Zhang, T.~Struffert, J.~Hornegger, R.~G. Grossman,
+  A.~Doerfler, and C.~Karmonik, ``Tetrahedral vs. polyhedral mesh size
+  evaluation on flow velocity and wall shear stress for cerebral hemodynamic
+  simulation,'' {\em Computer methods in biomechanics and biomedical
+  engineering}, vol.~14, no.~01, pp.~9--22, 2011.
+
+\bibitem{vacca2017virtual}
+G.~Vacca, ``Virtual element methods for hyperbolic problems on polygonal
+  meshes,'' {\em Computers \& Mathematics with Applications}, vol.~74, no.~5,
+  pp.~882--898, 2017.
+
+\bibitem{lipnikov2011mimetic}
+K.~Lipnikov, G.~Manzini, F.~Brezzi, and A.~Buffa, ``The mimetic finite
+  difference method for the 3d magnetostatic field problems on polyhedral
+  meshes,'' {\em Journal of Computational Physics}, vol.~230, no.~2,
+  pp.~305--328, 2011.
+
+\bibitem{antonietti2018high}
+P.~Antonietti and I.~Mazzieri, ``High-order discontinuous galerkin methods for
+  the elastodynamics equation on polygonal and polyhedral meshes,'' {\em
+  Computer Methods in Applied Mechanics and Engineering}, vol.~342,
+  pp.~414--437, 2018.
+
+\bibitem{antonietti2022machine}
+P.~F. Antonietti, F.~Dassi, and E.~Manuzzi, ``Machine learning based refinement
+  strategies for polyhedral grids with applications to virtual element and
+  polyhedral discontinuous galerkin methods,'' {\em Journal of Computational
+  Physics}, vol.~469, p.~111531, 2022.
+
+\bibitem{LI2024111846}
+Y.~Li and T.~Okaze, ``Application of polyhedral meshes in large-eddy simulation
+  of building array flow fields within neutral and unstable boundary layers,''
+  {\em Building and Environment}, vol.~263, p.~111846, 2024.
+
+\bibitem{dong2018discontinuous}
+Z.~Dong, ``Discontinuous galerkin methods for the biharmonic problem on
+  polygonal and polyhedral meshes,'' {\em arXiv preprint arXiv:1807.07817},
+  2018.
+
+\bibitem{antonietti2021high}
+P.~F. Antonietti, C.~Facciol{\`a}, P.~Houston, I.~Mazzieri, G.~Pennesi, and
+  M.~Verani, ``High--order discontinuous galerkin methods on polyhedral grids
+  for geophysical applications: seismic wave propagation and fractured
+  reservoir simulations,'' {\em Polyhedral methods in geosciences},
+  pp.~159--225, 2021.
+
+\bibitem{da2009mimetic}
+L.~B. Da~Veiga, V.~Gyrya, K.~Lipnikov, and G.~Manzini, ``Mimetic finite
+  difference method for the stokes problem on polygonal meshes,'' {\em Journal
+  of computational physics}, vol.~228, no.~19, pp.~7215--7232, 2009.
+
+\bibitem{da2014mimetic}
+L.~B. da~Veiga, K.~Lipnikov, and G.~Manzini, {\em The mimetic finite difference
+  method for elliptic problems}, vol.~11.
+\newblock Springer, 2014.
+
+\bibitem{cangiani2017virtual}
+A.~Cangiani, O.~J. Sutton, V.~Gyrya, and G.~Manzini, ``Virtual element methods
+  for elliptic problems on polygonal meshes,'' in {\em Generalized Barycentric
+  Coordinates in Computer Graphics and Computational Mechanics}, pp.~263--279,
+  CRC Press, 2017.
+
+\bibitem{sorgente2022polyhedral}
+T.~Sorgente, S.~Biasotti, G.~Manzini, and M.~Spagnuolo, ``Polyhedral mesh
+  quality indicator for the virtual element method,'' {\em Computers \&
+  Mathematics with Applications}, vol.~114, pp.~151--160, 2022.
+
+\bibitem{nora2022dualPoly}
+N.~Todjihounde, ``Génération et adaptation de maillages polyédriques,''
+  2024.
+
+\bibitem{nrechati_BenchReMesh}
+N.~Rechatin-Noël, ``{BenchReMesh, An open-source benchmark tool for polytopal
+  mesh numerical simulation}.''
+
+\bibitem{Badri_pdmt}
+M.~A. Badri, ``{PDMT, a parallel dual meshing tool for generating polyhedral
+  meshes}.''
+
+\bibitem{CEA_TRUST}
+CEA, ``{TRUST - The CEA’s open source HPC platform},'' 2024.
+
+\bibitem{bonelle2018new}
+J.~Bonelle, Y.~Fournier, and C.~Moulinec, ``New polyhedral discretisation
+  methods applied to the richards equation: Cdo schemes in code\_saturne,''
+  {\em Computers \& Fluids}, vol.~173, pp.~93--102, 2018.
+
+\bibitem{CEA_SALOME}
+CEA, ``{SALOME Platform - The open source platform for numerical simulation}.''
+
+\bibitem{Geuzaine2009Gmsh}
+C.~Geuzaine and J.-F. Remacle, ``Gmsh: A 3-{D} finite element mesh generator
+  with built-in pre- and post-processing facilities,'' {\em International
+  Journal for Numerical Methods in Engineering}, vol.~79, pp.~1309--1331, Sept.
+  2009.
+
+\bibitem{chau2018polytree}
+K.~N. Chau, K.~N. Chau, T.~Ngo, K.~Hackl, and H.~Nguyen-Xuan, ``A
+  polytree-based adaptive polygonal finite element method for multi-material
+  topology optimization,'' {\em Computer Methods in Applied Mechanics and
+  Engineering}, vol.~332, pp.~712--739, 2018.
+
+\bibitem{voroGPU}
+N.~Ray, D.~Sokolov, S.~Lefebvre, and B.~L{\'e}vy, ``Meshless voronoi on the
+  gpu,'' {\em ACM Transactions on Graphics (TOG)}, vol.~37, no.~6, pp.~1--12,
+  2018.
+
+\end{thebibliography}

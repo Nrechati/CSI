@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: ieeetr.bst
+Database file #1: ./biblio.bib
+Warning--entry type for "nora2022dualPoly" isn't style-file defined
+--line 175 of file ./biblio.bib
+Warning--entry type for "Badri_pdmt" isn't style-file defined
+--line 181 of file ./biblio.bib
+Warning--entry type for "nrechati_BenchReMesh" isn't style-file defined
+--line 187 of file ./biblio.bib
+Warning--entry type for "CEA_TRUST" isn't style-file defined
+--line 193 of file ./biblio.bib
+Warning--entry type for "CEA_SALOME" isn't style-file defined
+--line 200 of file ./biblio.bib
+You've used 25 entries,
+            1876 wiz_defined-function locations,
+            627 strings with 8358 characters,
+and the built_in function-call counts, 6892 in all, are:
+= -- 705
+> -- 249
+< -- 0
++ -- 94
+- -- 69
+* -- 460
+:= -- 945
+add.period$ -- 23
+call.type$ -- 25
+change.case$ -- 24
+chr.to.int$ -- 0
+cite$ -- 25
+duplicate$ -- 347
+empty$ -- 646
+format.name$ -- 69
+if$ -- 1702
+int.to.chr$ -- 0
+int.to.str$ -- 25
+missing$ -- 21
+newline$ -- 79
+num.names$ -- 25
+pop$ -- 73
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 293
+stack$ -- 0
+substring$ -- 488
+swap$ -- 166
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 73
+width$ -- 27
+write$ -- 238
+(There were 5 warnings)
