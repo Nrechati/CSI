@@ -57,13 +57,13 @@ Building on previous work conducted in our lab at CEA, as detailed in~\cite{nora
 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1.0\textwidth]{./Images/polyMesh}
+	\includegraphics[width=0.8\textwidth]{./Images/polyMesh}
 	\caption{\label{fig:polyMesh} Polygonal meshes generated with the ``smooth-dual'' approach. Refined from 135 to 6958 cells. Made with PDMT~\cite{Badri_pdmt}}
 \end{figure}
 
 \subsubsection{Numerical experiment}
 
-We will use the Poisson equation as a model problem when we demonstrate how to set boundary conditions for an imported mesh that includes boundary indicators. The Poisson equation is the canonical elliptic partial differential equation. For a domain $\Omega \subset \mathbb{R}^2$ with boundary $\partial \Omega = \cup_{i = 0}^3 \Gamma_{D, i}$. For this numerical experiment we define the domain $\Omega$ by $[0, 2\pi] \times [0, 2\pi]$. As it seemed convenient for the test functions we are planning on using with the manufactured solution method.
+We will use the Poisson equation as a model problem when we demonstrate how to set boundary conditions for an imported mesh that includes boundary indicators. The Poisson equation is the canonical elliptic partial differential equation, for a domain $\Omega \subset \mathbb{R}^2$ with boundary $\partial \Omega = \cup_{i = 0}^3 \Gamma_{D, i}$. For this numerical experiment we define the domain $\Omega$ by $[0, 2\pi] \times [0, 2\pi]$. As it seemed convenient for the test functions we are planning on using with the manufactured solution method.
 
 \paragraph{Poisson's equation}
 For this we decided to solve Poisson's Equation for a steady-state head distribution problem given by~:
@@ -278,6 +278,8 @@ The third approach we are considering does not seems to have been explored yet a
 \end{figure}
 
 \section{Conclusion}
+
+TO BE DONE after review
 
 \bibliographystyle{ieeetr}
 \bibliography{./biblio.bib}
