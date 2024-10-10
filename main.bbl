@@ -118,6 +118,15 @@ C.~Geuzaine and J.-F. Remacle, ``Gmsh: A 3-{D} finite element mesh generator
   Journal for Numerical Methods in Engineering}, vol.~79, pp.~1309--1331, Sept.
   2009.
 
+\bibitem{doi:10.1137/S0036144599352836}
+Q.~Du, V.~Faber, and M.~Gunzburger, ``Centroidal voronoi tessellations:
+  Applications and algorithms,'' {\em SIAM Review}, vol.~41, no.~4,
+  pp.~637--676, 1999.
+
+\bibitem{levy2015geogram}
+B.~L{\'e}vy and A.~Filbois, ``Geogram: a library for geometric algorithms,''
+  2015.
+
 \bibitem{chau2018polytree}
 K.~N. Chau, K.~N. Chau, T.~Ngo, K.~Hackl, and H.~Nguyen-Xuan, ``A
   polytree-based adaptive polygonal finite element method for multi-material

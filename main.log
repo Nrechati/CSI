@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.10)  10 OCT 2024 09:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.4.10)  10 OCT 2024 11:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -376,88 +376,88 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<./Images/polyMesh.png, id=131, 1742.76094pt x 595.47469pt>
+<./Images/polyMesh.png, id=129, 1742.76094pt x 595.47469pt>
 File: ./Images/polyMesh.png Graphic file (type png)
 <use ./Images/polyMesh.png>
-Package pdftex.def Info: ./Images/polyMesh.png  used on input line 60.
+Package pdftex.def Info: ./Images/polyMesh.png  used on input line 59.
 (pdftex.def)             Requested size: 354.86412pt x 121.24625pt.
  [2 <./Images/polyMesh.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 102--104
+Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--109
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
 [3]
-<./Images/refinements.png, id=173, 1663.71562pt x 557.08125pt>
+<./Images/refinements.png, id=174, 1663.71562pt x 557.08125pt>
 File: ./Images/refinements.png Graphic file (type png)
 <use ./Images/refinements.png>
-Package pdftex.def Info: ./Images/refinements.png  used on input line 144.
+Package pdftex.def Info: ./Images/refinements.png  used on input line 143.
 (pdftex.def)             Requested size: 354.86412pt x 118.81808pt.
  [4 <./Images/refinements.png>]
-<./Images/polyPipeline.png, id=189, 1667.47969pt x 762.59906pt>
+<./Images/polyPipeline.png, id=191, 1667.47969pt x 762.59906pt>
 File: ./Images/polyPipeline.png Graphic file (type png)
 <use ./Images/polyPipeline.png>
-Package pdftex.def Info: ./Images/polyPipeline.png  used on input line 154.
+Package pdftex.def Info: ./Images/polyPipeline.png  used on input line 153.
 (pdftex.def)             Requested size: 443.57848pt x 202.85577pt.
-<./Images/comTRI_POLY.png, id=191, 1664.46844pt x 759.58781pt>
+<./Images/comTRI_POLY.png, id=192, 1664.46844pt x 759.58781pt>
 File: ./Images/comTRI_POLY.png Graphic file (type png)
 <use ./Images/comTRI_POLY.png>
-Package pdftex.def Info: ./Images/comTRI_POLY.png  used on input line 160.
+Package pdftex.def Info: ./Images/comTRI_POLY.png  used on input line 158.
 (pdftex.def)             Requested size: 443.57848pt x 202.42566pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
+Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
 [5 <./Images/polyPipeline.png (PNG copy)> <./Images/comTRI_POLY.png (PNG copy)>]
-<./Images/ResultsBench.png, id=200, 1445.4pt x 578.16pt>
+<./Images/ResultsBench.png, id=201, 1445.4pt x 578.16pt>
 File: ./Images/ResultsBench.png Graphic file (type png)
 <use ./Images/ResultsBench.png>
-Package pdftex.def Info: ./Images/ResultsBench.png  used on input line 186.
+Package pdftex.def Info: ./Images/ResultsBench.png  used on input line 184.
 (pdftex.def)             Requested size: 443.57848pt x 177.42805pt.
  [6 <./Images/ResultsBench.png>] [7] [8]
-<./Images/polytree.png, id=217, 2207.99907pt x 731.73375pt>
+<./Images/polytree.png, id=223, 2207.99907pt x 731.73375pt>
 File: ./Images/polytree.png Graphic file (type png)
 <use ./Images/polytree.png>
-Package pdftex.def Info: ./Images/polytree.png  used on input line 258.
+Package pdftex.def Info: ./Images/polytree.png  used on input line 256.
 (pdftex.def)             Requested size: 310.50357pt x 102.8998pt.
  [9 <./Images/polytree.png>]
-<./Images/smoothDUAL.png, id=227, 1268.48906pt x 276.28218pt>
+<./Images/smoothDUAL.png, id=233, 1268.48906pt x 276.28218pt>
 File: ./Images/smoothDUAL.png Graphic file (type png)
 <use ./Images/smoothDUAL.png>
-Package pdftex.def Info: ./Images/smoothDUAL.png  used on input line 267.
+Package pdftex.def Info: ./Images/smoothDUAL.png  used on input line 265.
 (pdftex.def)             Requested size: 443.57848pt x 96.61168pt.
-<./Images/voroGPU.png, id=230, 679.78969pt x 475.02469pt>
+<./Images/voroGPU.png, id=236, 679.78969pt x 475.02469pt>
 File: ./Images/voroGPU.png Graphic file (type png)
 <use ./Images/voroGPU.png>
-Package pdftex.def Info: ./Images/voroGPU.png  used on input line 276.
+Package pdftex.def Info: ./Images/voroGPU.png  used on input line 274.
 (pdftex.def)             Requested size: 310.50357pt x 216.97011pt.
  (./main.bbl [10 <./Images/smoothDUAL.png> <./Images/voroGPU.png (PNG copy)>] [11]) [12] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: CF49D547E04AEBCEEE43C6E531837056;4624.
  ) 
 Here is how much of TeX's memory you used:
- 13054 strings out of 478287
- 214606 string characters out of 5849289
+ 13058 strings out of 478287
+ 214708 string characters out of 5849289
  548241 words of memory out of 5000000
- 31014 multiletter control sequences out of 15000+600000
+ 31016 multiletter control sequences out of 15000+600000
  478087 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,10n,63p,1322b,474s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (12 pages, 4289614 bytes).
+Output written on main.pdf (12 pages, 4290072 bytes).
 PDF statistics:
- 339 PDF objects out of 1000 (max. 8388607)
- 275 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
+ 346 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
+ 79 named destinations out of 1000 (max. 500000)
  217 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -39,21 +39,20 @@ With all this in mind, these first few months of work were dedicated to achievin
 \section{Experimenting on polygonal and polyhedral meshes}
 
 \subsection{Current interest for polyhedral meshing simulation.}
-Formulations for several finite element method does exist for polyhedral elements since years has seen in~\cite{rashid2006three,bishop2014displacement,gain2014virtual}. However, as cited in~\cite{bishop2020polyhedral} ``despite recent research in the development of polyhedral finite element formulations, the development of general purpose polyhedral meshing tools is lacking''.
+Formulations for several finite element methods on polyhedral elements have existed for years, as seen in works like~\cite{rashid2006three,bishop2014displacement,gain2014virtual}. However, as noted in~\cite{bishop2020polyhedral}, "despite recent research in the development of polyhedral finite element formulations, the development of general-purpose polyhedral meshing tools is lacking."
 
-Over the past ten years, there has been a growing body of publications focused on demonstrating and enhancing the capabilities of polygonal and polyhedral meshes. Early works, such as~\cite{spiegel2011tetrahedral}, compared tetrahedral and polyhedral meshes, while more recent studies~\cite{vacca2017virtual,lipnikov2011mimetic,antonietti2018high} started studying new methods tailored to polyhedral meshes across various physics domains. Additionally, much more recent research has begun to explore how new technologies can enhance polyhedral meshing simulations~\cite{antonietti2022machine} or apply it to recent challenges~\cite{LI2024111846}. This body of work reflects the significant development of polygonal and polyhedral meshes in numerical simulation, evolving from merely being evaluated to being optimized and built upon.
+In the past decade, a growing body of research has focused on demonstrating and improving the capabilities of polygonal and polyhedral meshes. Early works such as~\cite{spiegel2011tetrahedral} compared tetrahedral and polyhedral meshes, while more recent studies~\cite{vacca2017virtual,lipnikov2011mimetic,antonietti2018high} have explored new methods tailored specifically for polyhedral meshes in various physics domains. Additionally, recent research has begun investigating how emerging technologies can enhance polyhedral meshing simulations~\cite{antonietti2022machine} or be applied to modern challenges~\cite{LI2024111846}. This growing body of work reflects the significant evolution of polygonal and polyhedral meshes in numerical simulations, progressing from basic evaluation to optimization and practical applications.
 
-Among many different kinds of meshes which can be chosen for performing a numerical simulation, this new class of meshes – polyhedral meshes – is gaining in popularity. Recently, many numerical methods such as finite-elements and finite-volumes have started to adopt polyhedral discretization. Rightly so, as these meshes/discretization bring along advantages such as lower space complexity during meshing, lower CPU memory costs, higher-accuracy for solution, etc. Despite these recent advances in polyhedral discretization, a general purpose algorithm (mesher) that provides such meshes in a robust manner is lacking. Via this work, we intend to explore the subject of polyhedral meshing and re-meshing. Globally, the aim will be two-folds. First study/analyze/develop a polyhedral meshing algorithm/mesher. Second, for solution-accuracy and the computational cost associated to polyhedral discretization provide means for mesh adaption.
+Among the various types of meshes available for numerical simulations, polyhedral meshes have been gaining popularity. Recently, many numerical methods—such as finite element and finite volume methods—have adopted polyhedral discretization. These meshes offer advantages like reduced space complexity during meshing, lower CPU memory usage, and higher solution accuracy. Despite these advances, the lack of a robust general-purpose meshing algorithm for polyhedral meshes remains a challenge. In this work, we aim to address two primary goals: first, to study, analyze, and develop a polyhedral meshing algorithm; and second, to provide tools for mesh adaptation that optimize solution accuracy and computational costs associated with polyhedral discretization.
 
-We now have a lot more studies made regarding those numerical methods used for polyhedral meshes. Methods like Discontinuous Galerkin~\cite{dong2018discontinuous,antonietti2021high}, Mimetic Finite Difference~\cite{da2009mimetic,lipnikov2011mimetic,da2014mimetic}, Virtual Element Method~\cite{cangiani2017virtual,sorgente2022polyhedral} and other one have mature other the years on the subject. So we believe that addressing the development of polyhedral meshing tools could benefit from all this research regarding numerical methods.
-
+Over the years, significant research has been conducted on numerical methods for polyhedral meshes. Methods such as Discontinuous Galerkin~\cite{dong2018discontinuous,antonietti2021high}, Mimetic Finite Difference~\cite{da2009mimetic,lipnikov2011mimetic,da2014mimetic}, and Virtual Element Method~\cite{cangiani2017virtual,sorgente2022polyhedral} have matured significantly. As a result, we believe that addressing the development of polyhedral meshing tools can greatly benefit from the extensive research already done on these numerical methods.
 
 \subsection{Early benchmark for polytopal meshes}
 
 Although this work was primarily for learning purposes, focusing on the first two objectives outlined earlier, we also aimed to create a preliminary benchmark for the tools we intend to rely on in the coming months. Developing such a benchmark requires a comprehensive understanding of the entire process—from geometry generation to simulation results, post-processing, and evaluation—while also becoming familiar with the tools involved at each stage.
 
 \subsubsection{Goals}
-Building on previous work conducted in our lab at CEA, as detailed in~\cite{nora2022dualPoly}, we aimed to replicate part of the study to validate our expectations regarding the behavior of polygonal and polyhedral simulations across multiple refinements. The objective here was not to adjust the mesh to the simulation, but rather to observe how the model converges using polygonal meshes generated via the ``smooth-dual'' approach while adding more cells. Since we are employing a method called ``PolyMac'' which is currently under research at CEA, our initial step was to verify its convergence on a simple test case before comparing it to established results from triangular and square meshes. The idea is then to run the same test case over multiple refinements with the same number of cells and compare the convergence and the error produce by those meshes. Even if we know our methods of simulating and evaluating are going to keep evolving, this first bench aim to set the ground for our fully automated, open-source, tool that will be our starting point for this thesis work.~c.f~\cite{nrechati_BenchReMesh}
+Building on previous work conducted in our lab at CEA, as detailed in~\cite{nora2022dualPoly}, we aimed to replicate part of the study to validate our expectations regarding the behavior of polygonal and polyhedral simulations across multiple refinements. The objective here was not to adjust the mesh to the simulation, but rather to observe how the model converges using polygonal meshes generated via the ``dual-mesh'' approach, used in~\cite{bishop2020polyhedral}, while adding more cells. Since we are employing a method called ``PolyMac'' which is currently under research at CEA, our initial step was to verify its convergence on a simple test case before comparing it to established results from triangular and quadrangular meshes. The idea is then to run the same test case over multiple refinements with the same number of cells and compare the convergence and the error produced by those meshes. Even if we know our methods of simulating and evaluating are going to keep evolving, this first bench aim to set the ground for our fully automated, open-source, tool that will be our starting point for this thesis work.~c.f~\cite{nrechati_BenchReMesh}
 
 \begin{figure}[htbp]
 	\centering
@@ -63,7 +62,7 @@ Building on previous work conducted in our lab at CEA, as detailed in~\cite{nora
 
 \subsubsection{Numerical experiment}
 
-We will use the Poisson equation as a model problem when we demonstrate how to set boundary conditions for an imported mesh that includes boundary indicators. The Poisson equation is the canonical elliptic partial differential equation, for a domain $\Omega \subset \mathbb{R}^2$ with boundary $\partial \Omega = \cup_{i = 0}^3 \Gamma_{D, i}$. For this numerical experiment we define the domain $\Omega$ by $[0, 2\pi] \times [0, 2\pi]$. As it seemed convenient for the test functions we are planning on using with the manufactured solution method.
+We will use the Poisson equation as a model problem when we demonstrate how to set boundary conditions for an imported mesh that includes boundary indicators. The Poisson equation is the canonical elliptic partial differential equation, for a domain $\Omega \subset \mathbb{R}^2$ with boundary $\partial \Omega = \cup_{i = 0}^3 \Gamma_{D, i}$. For this numerical experiment we define the domain $\Omega$ by $[0, 2\pi] \times [0, 2\pi]$, as it seemed convenient for the test functions we are planning on using with the manufactured solution method.
 
 \paragraph{Poisson's equation}
 For this we decided to solve Poisson's Equation for a steady-state head distribution problem given by~:
@@ -77,7 +76,7 @@ where~$\alpha = 1$~,~$f$ is a source term and $\Delta$ the Laplacian operator de
 \]
 
 \paragraph{Boundary conditions}
-As Poisson's equation is a boundary value problem we need to set boundary conditions to $\partial\Omega$. After multiple experiments, the best set that we ended up with was setting a Dirichlet conditions to the top and bottom edges of $\Omega^h$ and a Neumann condition to the left and right edges. Define for Dirichlet condition by~:
+As Poisson's equation is a boundary value problem we need to set boundary conditions to $\partial\Omega$. After multiple experiments, the best set that we ended up with was setting Dirichlet conditions to the top and bottom edges of $\Omega^h$ and Neumann conditions to the left and right edges. Define for Dirichlet by~:
 \[
 u(x,y) = u_D(x,y)~~~~\forall (x,y) \in \partial\Omega_D,
 \]
@@ -92,7 +91,7 @@ Using the manufactured solution method, we first try to solve Poisson's with the
 \[
 u_m(x,y) = \cos(x)\sin(y)~~~~\forall (x,y) \in \Omega^h.
 \]
-To solve this equation with a numerical method we require source term $f_m$ and manufactured boundary conditions. To compute the manufactured source term,
+To solve this equation with a numerical method we require a source term $f_m$ and manufactured boundary conditions. To compute the manufactured source term,
 \[
 - f_m(x,y) = \frac{{\partial^2 u_m}}{\partial x^2} + \frac{{\partial^2 u_m}}{\partial y^2}.
 \]
@@ -133,7 +132,7 @@ L_2 = \frac{\sqrt{\int_{\Omega^h}{(u - u_m)}^2}}{\int_{\Omega^h}dA}
 \[
 L_{\infty} = \max{(\int_{\Omega^h} \frac{|(u - u_m)|}{dA})}~over~\Omega
 \]\\
-And will plot them in regards to the number of elements and the size f them in the meshes.
+And will plot them in regards to the number of elements and the size of them in the meshes.
 
 \subsubsection{Tools and pipeline}
 
@@ -145,16 +144,15 @@ To establish our benchmark, we utilized tools developed at CEA.~The SALOME platf
 	\caption{\label{refinements} Polygonal, Triangular, Quadrangular and Triangular mesh on the $2\pi$ square. Generated with GMSH and PDMT mesher}
 \end{figure}
 
-After refining our meshes using the HOMARD module in SALOME, we sent the simulation to TRUST via Python, incorporating the meshes, simulation parameters, and pre-computed boundary conditions. With the simulation results from TRUST using PolyMac method, we post-process using Paraview. We recreated the exact solution provided by TRUST alongside the manufactured solution expected by $u_D(x,y)$ over $\Omega$. This allowed us to compute the difference $(u - u_m)$ which is necessary to evaluate the $L_1, L_2$ and $L_\infty$ norms for a given simulation. This process was repeated across all five refinements for the three types of meshes, and the resulting values were plotted. Additional python post-processing was carried out to calculate the order of convergence of these curves and to gather information about the meshes.
+After refining our triangular and quadrangular meshes using the HOMARD module in SALOME, we generated five equivalent polygonal refined meshes with PDMT. We then sent the simulation to TRUST via Python, incorporating the meshes, simulation parameters, and pre-computed boundary conditions. With the PolyMac method results from TRUST, we moved on to post-processing in Paraview. We recreated the exact solution provided by TRUST, alongside the manufactured solution expected by $u_D(x,y)$ over $\Omega$. This enabled us to compute the difference $(u - u_m)$, necessary for evaluating the $L_1$, $L_2$, and $L_\infty$ norms for each simulation. This process was repeated across all five refinements for the three types of meshes, and the results were plotted. Additional Python post-processing was conducted to calculate the order of convergence for these curves and to gather detailed mesh information.
 
 \subsubsection{Results}
-In Paraview we then can se how the solution is distributed on $\Omega$ or even the error as in~\cref{polyPipeline}
+In Paraview we then can se how the solution is distributed on $\Omega$ or even the error as in~\cref{polyPipeline}, and compare those over different meshes and mesh types, c.f \cref{comTRI_POLY}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.0\textwidth]{./Images/polyPipeline.png}
 	\caption{\label{polyPipeline} TRUST solution, Manufactured solution and L2 error over $\Omega$ for a 1783 polygon mesh}
 \end{figure}
-And compare those over different meshes and mesh types, c.f \cref{comTRI_POLY}
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=1.0\textwidth]{./Images/comTRI_POLY.png}
@@ -186,7 +184,7 @@ Agglomerating those results then yield the following results detailed in \cref{R
 	\includegraphics[width=1.0\textwidth]{./Images/ResultsBench.png}
 	\caption{\label{ResultsBench} Comparisons following the same pipeline between triangular and polygonal meshes}
 \end{figure}
-The initial observation is that all models converge at a rate close to the expected $h^2$. Although the triangle and quadrangle meshes exhibit slightly lower error values compared to the polygonal meshes, this perspective shifts when considering the number of cells. For example, when comparing the three meshes with roughly the same number of elements (~3000+), the polygonal mesh shows a lower error than the triangular mesh. This observation aligns with similar findings in the community; however, expanding our benchmarking capabilities and increasing the complexity of the tests will be essential for further insights.
+The initial observation is that all models converge at a rate close to the expected $h^2$. Although the triangle and quadrangle meshes exhibit slightly lower error values compared to the polygonal meshes, this perspective shifts when considering the number of cells. For example, when comparing the three meshes with roughly the same number of elements (~3000+), the polygonal mesh shows a lower error than the triangular mesh. This observation aligns with similar findings in the community~\cite{bishop2020polyhedral}; however, expanding our benchmarking capabilities and increasing the complexity of the tests will be essential for further insights.
 
 Our primary objective was to develop a flexible benchmark to evolve with ongoing studies and improve polytopal mesh simulations. We now have a fully automated, open-source Python code that generates, simulates, and post-processes multiple simulations. Moving forward, we aim to continually enhance this tool to make our benchmark more capable and robust as the complexity of our numerical simulations increases and we test a wider range of methods.
 
@@ -197,9 +195,9 @@ After analyzing these preliminary results, we can reflect on how they were influ
 Going from 2D to 3D space could mean a lot to some simulation method or optimizations. Even still something yet to theorize in some case. For example, the dual approach used by PDMT to generate the polygonal meshes targeted by our benchmark cannot, as of today, generate a 3D mesh. So even if this technique has known asset for the adaptive mesh refinement part, we have no way to reproduce our benchmark study in 3D with this tool. Thus we have no way to see if the observed tendency to obtain roughly the same error as other mesh type but with a lower number of cells will translate in 3D.
 
 \subsubsection{Geogram and Centroïdal Voronoi Tesselation}
-Given this limitation, we had to explore alternative methods for meshing with polygons and polyhedral to properly validate our approach. Regarding polygonal/polyhedral mesh generation, we began investigating the potential of Centroïdal Voronoi Tesselation (CVT). In particular, we utilized the tool developed by Bruno Levy: Geogram [<insert ref>]. Geogram is a comprehensive library offering various tools to generate, visualize, modify, and clean a wide range of polygonal and polyhedral meshes. Following the initial benchmark results, we focused on generating similar polygonal meshes with comparable refinement levels to those previously used. Our objective was to replicate the benchmark setup and assess whether the obtained results would hold with CVT-generated polygonal meshes before applying this method to polyhedral meshes.
+Given this limitation, we had to explore alternative methods for meshing with polygons and polyhedral to properly validate our approach. Regarding polygonal/polyhedral mesh generation, we began investigating the potential of Centroïdal Voronoi Tesselation (CVT)~\cite{doi:10.1137/S0036144599352836}. In particular, we utilized the tool developed by Bruno Levy: Geogram~\cite{levy2015geogram}. Geogram is a comprehensive library offering various tools to generate, visualize, modify, and clean a wide range of polygonal and polyhedral meshes. Following the initial benchmark results, we focused on generating similar polygonal meshes with comparable refinement levels to those previously used. Our objective was to replicate the benchmark setup and assess whether the obtained results would hold with CVT-generated polygonal meshes before applying this method to polyhedral meshes.
 
-In parallel, Geogram's Vorpalite tool [<insert ref>] enabled us to generate polyhedral meshes using the same CVT technique. Building upon a plugin developed for the Salome platform [<insert ref>], we are also working on obtaining the first simulations using the PolyMac method on a 3D-square mesh. Since the simulation of tetrahedral and hexahedral meshes in 3D does not require such preparatory work, achieving this initial simulation with a CVT-generated mesh using TRUST and the PolyMac method will provide all the necessary components to recreate our benchmark study in 3D. As the focus of this research is on improving adaptive mesh refinement techniques for polyhedral meshes, we aim to confirm the trends observed in our results with these meshes.
+In parallel, Geogram's Vorpalite tool enabled us to generate polyhedral meshes using the same CVT technique. Building upon a plugin developed for the Salome platform, we are also working on obtaining the first simulations using the PolyMac method on a 3D-square mesh. Since the simulation of tetrahedral and hexahedral meshes in 3D does not require such preparatory work, achieving this initial simulation with a CVT-generated mesh using TRUST and the PolyMac method will provide all the necessary components to recreate our benchmark study in 3D. As the focus of this research is on improving adaptive mesh refinement techniques for polyhedral meshes, we aim to confirm the trends observed in our results with these meshes.
 
 We will further explore how CVT mesh generation could also provide a promising direction for the mesh refinement aspect of this research. As CVT generates polyhedral meshes with overall good quality and favorable properties, based on a set of points that can be positioned almost arbitrarily in space.
 
